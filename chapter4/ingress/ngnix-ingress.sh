@@ -40,7 +40,7 @@ echo -e "Creating the Ingress rule using $hostip"
 echo -e "*******************************************************************************************************************\n"
 tput setaf 2
 sleep 2
-envsubst < ingress.yaml | kubectl create -f - --namespace default
+envsubst < ingress/ingress.yaml | kubectl create -f - --namespace default
 
 # Use the IP found in the previous step:
 # Summarize the KinD deployment and show the user an example of a nip.io address that can be used for Ingress rules.
